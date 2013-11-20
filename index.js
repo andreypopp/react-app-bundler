@@ -34,7 +34,7 @@ function create(entry, opts) {
   opts = opts || {};
   opts.logger = opts.logger || require('quiet-console');
 
-  var bundle = undefined;
+  var bundle;
   var root = opts.root || getCallsiteDirname();
 
   var b = isBrowserify(entry) ?
