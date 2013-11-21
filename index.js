@@ -43,9 +43,11 @@ function create(entry, opts) {
       .transform(reactify)
       .require(entry, {expose: './app', basedir: root});
 
-  var w = watchify(b);
+  if (opts.watch) {
+    var w = watchify(b);
+    w.on('update', build);
+  }
 
-  w.on('update', build);
   build();
 
   var bundler = function() {
