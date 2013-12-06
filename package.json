@@ -26,7 +26,6 @@
   "dependencies": {
     "watchify": "~0.3.0",
     "browserify": "~2.35.4",
-    "react-tools": "~0.5.1",
     "reactify": "~0.4.0",
     "get-callsite-dirname": "~0.1.0",
     "stream-aggregate-promise": "~0.1.2",
