@@ -1,6 +1,6 @@
 {
   "name": "react-app-bundler",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React-app interface to browserify client code bundler",
   "main": "index.js",
   "scripts": {
