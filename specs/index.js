@@ -36,7 +36,7 @@ describe('bundler middleware', function() {
 
   function get() {
     return req(app)
-      .get('/bundle.js')   
+      .get('/bundle.js')
       .expect(200)
       .expect('Content-type', 'application/javascript');
   }
