@@ -4,6 +4,8 @@ var path                = require('path');
 var browserify          = require('browserify');
 var watchify            = require('watchify');
 var reactify            = require('reactify');
+var uglifyify           = require('uglifyify');
+var envify              = require('envify');
 var aggregate           = require('stream-aggregate-promise');
 var getCallsiteDirname  = require('get-callsite-dirname');
 
@@ -42,6 +44,12 @@ function create(entry, opts) {
     browserify()
       .transform(reactify)
       .require(entry, {expose: './app', basedir: root});
+
+  if(!opts.debug) {
+    b
+      .transform(envify)
+      .transform(uglifyify);
+  }
 
   if (opts.watch) {
     var w = watchify(b);
