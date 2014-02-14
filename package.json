@@ -29,6 +29,8 @@
     "reactify": "~0.5.0",
     "get-callsite-dirname": "~0.1.0",
     "stream-aggregate-promise": "~0.1.2",
-    "quiet-console": "~0.1.0"
+    "quiet-console": "~0.1.0",
+    "envify": "~1.0.1",
+    "uglifyify": "~1.2.1"
   }
 }
